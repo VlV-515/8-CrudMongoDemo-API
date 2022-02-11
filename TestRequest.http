@@ -1,1 +1,50 @@
+### Create 1
+POST http://localhost:3000/crud HTTP/1.1
+Content-Type: application/json
 
+{
+    "username":"adminU",
+    "pass":"adminP",
+    "name":"Ignacio",
+    "lastname":"Tirado",
+    "email":"jorgeignacio2020@gmail.com",
+    "dateIn":"01/01/2022",
+    "role":"admin"
+}
+
+### Create 2
+POST http://localhost:3000/crud HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"userU",
+    "pass":"userP",
+    "name":"Jorge",
+    "lastname":"Tirado",
+    "email":"jorgeignacio2020@gmail.com",
+    "dateIn":"02/02/2022",
+    "role":"user"
+}
+
+### Get All
+GET http://localhost:3000/crud HTTP/1.1
+
+### Get One
+GET http://localhost:3000/crud/6205bb741feb695b38ff5ee1 HTTP/1.1
+
+### Update
+PUT http://localhost:3000/crud/6205bb741feb695b38ff5ee1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"editU",
+    "pass":"editP",
+    "name":"Name Edit",
+    "lastname":"Lastname Edit",
+    "email":"edit@gmail.com",
+    "dateIn":"09/09/2099",
+    "role":"edit"
+}
+
+### Delete
+DELETE http://localhost:3000/crud/6205bb741feb695b38ff5ee1 HTTP/1.1
